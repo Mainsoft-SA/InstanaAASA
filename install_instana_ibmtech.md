@@ -274,22 +274,4 @@ yum versionlock add stanctl
 
 stanctl up
 
-
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-chmod 700 get_helm.sh
-./get_helm.sh
-
-helm install synthetic-pop \
-	--repo "https://agents.instana.io/helm" \
-	--namespace popmef \
-	--create-namespace \
-	--set downloadKey="obLIi27lSoKNFIp0iZdh8A" \
-	--set controller.location="POPMEF;POPMEF;Lima;Lima;0;0;POPMEF" \
-	--set controller.clusterName="POPMEF" \
-	--set controller.instanaKey="obLIi27lSoKNFIp0iZdh8A" \
-	--set controller.instanaSyntheticEndpoint="https://synthetics.apm.mineco.gob.pe/synthetics" \
-	--set redis.tls.enabled=false \
-	--set redis.password="Mainsoft.123" \
-	synthetic-pop
-
 ```
