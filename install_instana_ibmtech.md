@@ -109,16 +109,11 @@ ssh root@10.249.128.35
  
 https://ibm.seismic.com/Link/Content/DCQfMjDgqWT2B87FWXPhGXQbJGDP
 
-AgentKey:
-• RlWYfpi2RACQ7b4YEfAubg
-SalesId:
-• 5NOxPmT9Q26bo6QbzdBGPg
-Expires June 30, 2026
 
-sales_key = "WB6cJcexTpiYMSnL9etr8w"
-download_key = "lYXhsTslRHacNL7TY_EXDQ"
+sales_key = "xxxxxxxxxxxxxxxxxxxx"
+download_key = "xxxxxxxxxxxxxxxxxxxxxxxx"
 
-export DOWNLOAD_KEY=lYXhsTslRHacNL7TY_EXDQ
+export DOWNLOAD_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 cat << EOF > /etc/yum.repos.d/Instana-Product.repo
@@ -153,10 +148,10 @@ stanctl up \
   --core-base-domain="lab.mainsoft.com" \
   --core-tls-generate-cert \
   --timeout="60m0s" \
-  --download-key="lYXhsTslRHacNL7TY_EXDQ" \
-  --sales-key="WB6cJcexTpiYMSnL9etr8w" \
-  --unit-agent-key="lYXhsTslRHacNL7TY_EXDQ" \
-  --unit-initial-admin-password="Mainsoft.123" \
+  --download-key="xxxxxxxxxxxxxxxxxxxxxxxx" \
+  --sales-key="xxxxxxxxxxxxxxxxxxxxxxxx" \
+  --unit-agent-key="xxxxxxxxxxxxxxxxxxxxxxxx" \
+  --unit-initial-admin-password="xxxxxxxxxxxxxxxxxxxxxxxx" \
   --unit-tenant-name="aasa" \
   --unit-unit-name="sandbox" \
   --volume-objects="/mnt/instana/stanctl/objects" \
@@ -183,8 +178,7 @@ Registrar en archivo hosts
 Validar ingresando a Instana
 https://sandbox-aasa.lab.mainsoft.com/
 admin@instana.local
-Mainsoft.123
-
+xxxxxxxxxxxxxxxxxxxxxxxx
 
 stanctl backend apply --core-feature-flags feature.synthetics.enabled=true
 stanctl backend apply --core-feature-flags feature.automation.enabled=true
@@ -205,8 +199,8 @@ stanctl backend apply \
   --core-base-domain="apm.mineco.gob.pe" \
   --core-tls-crt="/mnt/instana/stanctl/apm.mineco.gob.pe.ssl.crt" \
   --core-tls-key="/mnt/instana/stanctl/apm.mineco.gob.pe.pem.key" \
-  --download-key="obLIi27lSoKNFIp0iZdh8A" \
-  --sales-key="12Uxtb2FT6WkEZG06wVIhQ" \
+  --download-key="xxxxxxxxxxxxxxxxxxxxxxxx" \
+  --sales-key="xxxxxxxxxxxxxxxxxxxxxxxx" \
   --core-use-tu-url-path=false \
   --core-acceptors-agent-port=443 \
   --core-acceptors-agent-host=agent-acceptor.apm.mineco.gob.pe \
